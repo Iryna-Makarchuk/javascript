@@ -95,14 +95,6 @@ a {
     margin-top: 100px;
     margin-left: 350px;
     position: relative;
-    z-index: 1;
-}
-
-.img-close-box {
-    padding: 0;
-    margin-left: 1180px;
-    margin-top: -50px;
-    margin-bottom: 45px;
 }
 
 .header-address {
@@ -142,7 +134,6 @@ nav div a {
     margin-left: 50px;
     position: relative;
     z-index: 1;
-
 }
 
 nav div a:first-child {
@@ -153,32 +144,57 @@ nav div a:last-child {
     padding-left: 35px;
 }
 
-.burger-menu-open a {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    text-align: center;
+#navigation-block {
+    position: absolute;
+    width: 1445px;
+    height: 242px;
+    background: #f8c255;
+    margin-top: -245px;
+    margin-left: -841px;
+    display: none;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 122px;
+    width: 1444px;
+    margin-left: -120px;
+}
+
+#menu:first-child {
+    padding-left: 120px;
+}
+
+#close-menu {
+    margin-left: 140px;
+    margin-top: -24px;
+    width: 57px;
+}
+
+#menu a {
+    font-family: 'Roboto Regular', sans-serif;
     font-size: 28px;
+    color: #fff;
+    width: 170px;
+    position: center;
+    margin: 0 20px;
 }
 
-#close {
-    font-size: 120px;
+#menu a:hover {
+    color: black;
 }
 
-#burger-id.hidden {
-    visibility: hidden;
+.header-menu {
+    position: relative;
+    background: #7acec3 url("images/line.png");
+    width: 930px;
 }
 
 .burger-menu:hover {
     box-shadow: 0 0 4px 4px #f8c255;
     background-color: #f8c255;
-}
-
-.burger-menu-open.hidden {
-    visibility: hidden;
-}
-
-.line {
-    z-index: 0;
 }
 
 .projects-col-1-1 {
@@ -529,7 +545,6 @@ nav div a:last-child {
 .view-project-piero {
     padding-top: 20px;
     margin-left: -50px;
-    /*margin-top: 0px;*/
     font-size: 36px;
     z-index: 1;
     position: relative;
