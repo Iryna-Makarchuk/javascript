@@ -18,49 +18,49 @@ const calculateChange = (price, sum) => {
     FIFTY: 50,
     HUNDRED: 100,
     TWO_HUNDRED: 200,
-    FIVE_HUNDRED: 500,
+    FIVE_HUNDRED: 500
   }
 
-  let change = sum - price;
-  let left = 0;
-  const tempChange = {};
+  let change = sum - price
+  let left = 0
+  const tempChange = {}
 
   while (change > 0) {
     if (change >= cash.FIVE_HUNDRED) {
-      left = change % cash.FIVE_HUNDRED;
-      tempChange.FIVE_HUNDRED = Math.floor(change / cash.FIVE_HUNDRED);
+      left = change % cash.FIVE_HUNDRED
+      tempChange.FIVE_HUNDRED = Math.floor(change / cash.FIVE_HUNDRED)
     } else if (change >= cash.TWO_HUNDRED) {
-      left = change % cash.TWO_HUNDRED;
-      tempChange.TWO_HUNDRED = Math.floor(change / cash.TWO_HUNDRED);
+      left = change % cash.TWO_HUNDRED
+      tempChange.TWO_HUNDRED = Math.floor(change / cash.TWO_HUNDRED)
     } else if (change >= cash.HUNDRED) {
-      left = change % cash.HUNDRED;
-      tempChange.HUNDRED = Math.floor(change / cash.HUNDRED);
+      left = change % cash.HUNDRED
+      tempChange.HUNDRED = Math.floor(change / cash.HUNDRED)
     } else if (change >= cash.FIFTY) {
-      left = change % cash.FIFTY;
-      tempChange.FIFTY = Math.floor(change / cash.FIFTY);
+      left = change % cash.FIFTY
+      tempChange.FIFTY = Math.floor(change / cash.FIFTY)
     } else if (change >= cash.TWENTY) {
-      left = change % cash.TWENTY;
-      tempChange.TWENTY = Math.floor(change / cash.TWENTY);
+      left = change % cash.TWENTY
+      tempChange.TWENTY = Math.floor(change / cash.TWENTY)
     } else if (change >= cash.TEN) {
-      left = change % cash.TEN;
-      tempChange.TEN = Math.floor(change / cash.TEN);
+      left = change % cash.TEN
+      tempChange.TEN = Math.floor(change / cash.TEN)
     } else if (change >= cash.FIVE) {
-      left = change % cash.FIVE;
-      tempChange.FIVE = Math.floor(change / cash.FIVE);
+      left = change % cash.FIVE
+      tempChange.FIVE = Math.floor(change / cash.FIVE)
     } else if (change >= cash.TWO) {
-      left = change % cash.TWO;
-      tempChange.TWO = Math.floor(change / cash.TWO);
+      left = change % cash.TWO
+      tempChange.TWO = Math.floor(change / cash.TWO)
     } else if (change >= cash.ONE) {
-      left = change % cash.ONE;
-      tempChange.ONE = Math.floor(change / cash.ONE);
+      left = change % cash.ONE
+      tempChange.ONE = Math.floor(change / cash.ONE)
     }
-    change = left;
+    change = left
   }
 
-  return tempChange;
-};
+  return tempChange
+}
 
-console.log(calculateChange(255, 500), '=> 245');
-console.log(calculateChange(12, 50), '=> 38');
-console.log(calculateChange(44, 100), '=> 56');
-console.log(calculateChange(5, 20), '=> 15');
+console.log(calculateChange(255, 500), '=> 245')
+console.log(calculateChange(12, 50), '=> 38')
+console.log(calculateChange(44, 100), '=> 56')
+console.log(calculateChange(5, 20), '=> 15')

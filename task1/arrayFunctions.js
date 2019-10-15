@@ -12,74 +12,74 @@
  */
 
 const isNumeric = (data) => {
-  return ((data ^ 0) === data) && !Number.isNaN(parseInt(data)) && Number.isFinite(data);
-};
+  return ((data ^ 0) === data) && !Number.isNaN(parseInt(data)) && Number.isFinite(data)
+}
 
 const getMinOfArray = (array) => {
   if (Array.isArray(array)) {
-    let minimum;
+    let minimum
     for (let i = 0; i < array.length; i++) {
-      const data = +array[i];
+      const data = +array[i]
 
       if (isNumeric(data) && (!minimum || data < minimum)) {
-        minimum = data;
+        minimum = data
       }
     }
-    return minimum;
+    return minimum
   }
 
-  return null;
-};
+  return null
+}
 
 const getMaxOfArray = (array) => {
   if (Array.isArray(array)) {
-    let maximum;
+    let maximum
     for (let i = 0; i < array.length; i++) {
-      const data = +array[i];
+      const data = +array[i]
 
       if (isNumeric(data) && (!maximum || data > maximum)) {
-        maximum = data;
+        maximum = data
       }
     }
-    return maximum;
+    return maximum
   }
 
-  return null;
-};
+  return null
+}
 
 const getSumOfArrayNumbers = (array) => {
   if (Array.isArray(array)) {
-    let sum = null;
+    let sum = null
     for (let i = 0; i < array.length; i++) {
-      const data = +array[i];
+      const data = +array[i]
 
       if (isNumeric(data)) {
-        sum += data;
+        sum += data
       }
     }
 
-    return sum;
+    return sum
   }
-};
+}
 
-console.log('MIN');
-console.log(getMinOfArray([3, 0, -5, 1, 44, -12, 3, 0, 0, '-35', 1, 2, -3, -3, 2, 1, 4, -2 - 3 - 1]));
-console.log(getMinOfArray([-1, -8, -2]));
-console.log(getMinOfArray([1, 7, 3]));
-console.log(getMinOfArray([1, undefined, 3, 5, -3]));
-console.log(getMinOfArray([1, NaN, 3, 5, -3]));
+console.log('MIN')
+console.log(getMinOfArray([3, 0, -5, 1, 44, -12, 3, 0, 0, '-35', 1, 2, -3, -3, 2, 1, 4, -2 - 3 - 1]))
+console.log(getMinOfArray([-1, -8, -2]))
+console.log(getMinOfArray([1, 7, 3]))
+console.log(getMinOfArray([1, undefined, 3, 5, -3]))
+console.log(getMinOfArray([1, NaN, 3, 5, -3]))
 
-console.log('\nMAX');
-console.log(getMaxOfArray([3, 0, -5, 1, 44, -12, 3, 0, 0, '-35', '45', 1, 2, -3, -3, 2, 1, 4, -2 - 3 - 1]));
-console.log(getMaxOfArray([-1, -8, -2]));
-console.log(getMaxOfArray([1, 7, 3]));
-console.log(getMaxOfArray([1, undefined, 3, 5, -3]));
-console.log(getMaxOfArray([1, NaN, 3, 5, -3]));
+console.log('\nMAX')
+console.log(getMaxOfArray([3, 0, -5, 1, 44, -12, 3, 0, 0, '-35', '45', 1, 2, -3, -3, 2, 1, 4, -2 - 3 - 1]))
+console.log(getMaxOfArray([-1, -8, -2]))
+console.log(getMaxOfArray([1, 7, 3]))
+console.log(getMaxOfArray([1, undefined, 3, 5, -3]))
+console.log(getMaxOfArray([1, NaN, 3, 5, -3]))
 
-console.log('\nSUM');
-console.log(getSumOfArrayNumbers([3, 0, -5, 1, 44, -12, 3, 0, 0, 1, '-35', '45', 2, -3, -3, 2, 1, 4, -2 - 3 - 1]));
-console.log(getSumOfArrayNumbers([3, 0, -5, 1, 44, -12, 3, 0, 0, 1, 2, -3, -3, 2, 1, 4, -2 - 3 - 1]));
-console.log(getSumOfArrayNumbers([-1, -8, -2]));
-console.log(getSumOfArrayNumbers([1, 7, 3]));
-console.log(getSumOfArrayNumbers([1, undefined, 3, 5, -3]));
-console.log(getSumOfArrayNumbers([1, NaN, 3, 5, -3]));
+console.log('\nSUM')
+console.log(getSumOfArrayNumbers([3, 0, -5, 1, 44, -12, 3, 0, 0, 1, '-35', '45', 2, -3, -3, 2, 1, 4, -2 - 3 - 1]))
+console.log(getSumOfArrayNumbers([3, 0, -5, 1, 44, -12, 3, 0, 0, 1, 2, -3, -3, 2, 1, 4, -2 - 3 - 1]))
+console.log(getSumOfArrayNumbers([-1, -8, -2]))
+console.log(getSumOfArrayNumbers([1, 7, 3]))
+console.log(getSumOfArrayNumbers([1, undefined, 3, 5, -3]))
+console.log(getSumOfArrayNumbers([1, NaN, 3, 5, -3]))
