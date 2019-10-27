@@ -37,8 +37,15 @@ const render = () => {
   }
 
   function getName () {
-    const value = inputFieldDom.value
-    return value === '' ? 'Tamagotchi' : value
+    const maxNameLength = 10
+
+    let value = inputFieldDom.value
+    if (value === '') {
+      value = 'Tamagotchi'
+    } else if (value.length > maxNameLength) {
+      value = value.slice(0, 11)
+    }
+    return value
   }
 
   const changeImages = (player) => {
@@ -99,7 +106,7 @@ const render = () => {
         finishGame(player)
         clearInterval(timer)
       }
-    }, 5)
+    }, 500)
   }
 
   const generateImagesBlock = () => {
@@ -174,7 +181,7 @@ const render = () => {
     schoolButton.classList.add('school-button')
     schoolButton.innerText = 'Go to school'
 
-    buttonsDom.addEventListener('click', ({target}) => {
+    buttonsDom.addEventListener('click', ({ target }) => {
       if (target.classList.contains('feed-button')) {
         player.feed()
       }
@@ -213,7 +220,7 @@ const render = () => {
 
   const finishGame = (player) => {
     player.setAliveState(false)
-    player.setShowTamagotchiState(false)
+    player.setTamagotchiState(false)
     gameContainerDom.innerHTML = 'Game over'
     gameContainerDom.classList.add('over')
 
