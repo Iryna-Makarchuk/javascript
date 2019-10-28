@@ -37,12 +37,12 @@ const render = () => {
   }
 
   function getName () {
-    const maxNameLength = 10
+    const MAX_NAME_LENGTH = 10
 
     let value = inputFieldDom.value
     if (value === '') {
       value = 'Tamagotchi'
-    } else if (value.length > maxNameLength) {
+    } else if (value.length > MAX_NAME_LENGTH) {
       value = value.slice(0, 11)
     }
     return value
