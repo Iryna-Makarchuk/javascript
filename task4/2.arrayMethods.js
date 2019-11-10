@@ -51,9 +51,9 @@ Array.prototype.mySort = function (compareFn) {
         : compareFunctionResult(array[i].toString() > basis.toString())
 
       if (comparator) {
-        high[high.length] = (array[i])
+        high[high.length] = array[i]
       } else {
-        low[low.length] = (array[i])
+        low[low.length] = array[i]
       }
     }
     return [...QuickSort(low), basis, ...QuickSort(high)]
