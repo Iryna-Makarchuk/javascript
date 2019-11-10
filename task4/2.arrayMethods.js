@@ -67,12 +67,8 @@ console.log('forEach');
 [5, 3, 7].forEach((value, index, array) => console.log(value, index, array))
 
 console.log('\nmap')
-console.log([5, 3, 7].myMap((value, index, array) => {
-  return value + ++array[index]
-}))
-console.log([5, 3, 7].map((value, index, array) => {
-  return value + ++array[index]
-}))
+console.log([5, 3, 7].myMap((value, index, array) => value + ++array[index]))
+console.log([5, 3, 7].map((value, index, array) => value + ++array[index]))
 console.log('\nsort')
 console.log([5, 3, 9, 2, 1].mySort(compare))
 console.log([5, 3, 9, 2, 1].sort(compare))
