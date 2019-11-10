@@ -16,7 +16,7 @@
  0 <= c0 < C
  */
 
-const 3 = (row = 1, column = 1, r0 = 0, c0 = 0) => {
+const moveBySnake = (row = 1, column = 1, r0 = 0, c0 = 0) => {
   const BOUNDARY = {
     MIN: 0,
     MAX: 100
@@ -86,6 +86,6 @@ const 3 = (row = 1, column = 1, r0 = 0, c0 = 0) => {
 
   return result
 }
-console.log('\n', 3(5, 6, 1, 4))
-console.log('\n', 3(1, 4, 0, 0))
-console.log('\n', 3(1, 101, 0, 0))
+console.log('\n', moveBySnake(5, 6, 1, 4))
+console.log('\n', moveBySnake(1, 4, 0, 0))
+console.log('\n', moveBySnake(1, 101, 0, 0))
